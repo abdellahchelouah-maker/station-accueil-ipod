@@ -1,0 +1,5 @@
+Images à insérer par l'enseignant (les élèves ne déposent rien sur le site).
+Chaque cadre en pointillés indique le nom de fichier attendu. Dès que le fichier existe, l'image remplace le cadre.
+Étape 5 : etape5-haut-parleur.png, etape5-prise-jack.png, etape5-exemple-assemblage.png, etape5-exemple-impact.png
+Barème : bareme-original.png
+Annexe SysML : annexe-sysml-p-1.jpg à annexe-sysml-p-5.jpg (déjà fournies)

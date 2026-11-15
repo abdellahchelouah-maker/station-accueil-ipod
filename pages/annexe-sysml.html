@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Annexe SysML · Station iPod</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body><header class="nav"><div class="in"><a class="brand" href="../index.html">Station iPod</a>
+<nav aria-label="Navigation de la séquence"><ul><li><a href="../index.html">Accueil</a></li><li><a href="etape1-modeliser-ipod.html" data-step="1">1 · iPod</a></li><li><a href="etape2-mise-en-plan.html" data-step="2">2 · Plan</a></li><li><a href="etape3-cahier-des-charges-sysml.html" data-step="3">3 · SysML</a></li><li><a href="etape4-creativite.html" data-step="4">4 · Créativité</a></li><li><a href="etape5-modeliser-station.html" data-step="5">5 · Station</a></li><li><a href="etape6-valider.html" data-step="6">6 · Validation</a></li><li><a href="annexe-sysml.html" aria-current="page">Annexe SysML</a></li><li><a href="evaluation.html">Évaluation</a></li></ul></nav></div></header><svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="mk" d="M1 1 L9 5 L1 9"/></marker>
+<marker id="mf" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="mkf" d="M1 1 L9 5 L1 9 Z"/></marker>
+<marker id="mt" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="11" markerHeight="11" orient="auto-start-reverse"><path class="mkh" d="M1 1 L11 6 L1 11 Z"/></marker>
+<marker id="dh" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="14" markerHeight="9" orient="auto-start-reverse"><path class="mkh" d="M1 5 L8 1 L15 5 L8 9 Z"/></marker>
+<marker id="df" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="14" markerHeight="9" orient="auto-start-reverse"><path class="mkf" d="M1 5 L8 1 L15 5 L8 9 Z"/></marker>
+</defs></svg>
+<main>
+<div class="phead"><div class="in"><p class="crumb"><a href="../index.html">Accueil</a> · Annexe documentaire</p>
+<p class="eyebrow">Annexe documentaire</p><h1>SysML : les diagrammes.</h1>
+<p class="lead">Six fiches pour lire et dessiner les diagrammes du projet. Chaque fiche tient sur un écran et son exemple porte sur la station iPod.</p>
+<p class="src">Adapté de « SysML : les diagrammes », Didier Fagnon et Stéphane Gaston, <i>Technologie</i> n° 179, avril 2012, pages 100 à 104.</p></div></div>
+<nav class="toc" aria-label="Fiches de l'annexe"><div class="in">
+<a href="#choisir">Quel diagramme ?</a><a href="#relations">Relations</a><a href="#f1">1 Exigences</a><a href="#f2">2 Cas d'utilisation</a><a href="#f3">3 Séquence</a><a href="#f4">4 État</a><a href="#f5">5 Blocs</a><a href="#f6">6 Blocs internes</a><a href="#original">Original</a></div></nav>
+<div class="in">
+<section class="sec" id="choisir"><h3>Quel diagramme pour quelle question ?</h3>
+<p class="sub">À l'étape 3, le sujet demande le diagramme de contexte, le diagramme des cas d'utilisation et le diagramme des exigences. Les autres servent pour aller plus loin.</p>
+<div class="which"><a href="#f1"><span class="q">Que doit faire la station ?</span><span class="d">Exigences</span><span class="tag ask">Demandé</span></a><a href="#f2"><span class="q">Qui l&#x27;utilise, pour quels services ?</span><span class="d">Cas d&#x27;utilisation</span><span class="tag ask">Demandé</span></a><a href="#f3"><span class="q">Dans quel ordre les échanges ont-ils lieu ?</span><span class="d">Séquence</span><span class="tag more">En plus</span></a><a href="#f4"><span class="q">Quels états, quels événements ?</span><span class="d">État</span><span class="tag more">En plus</span></a><a href="#f5"><span class="q">De quoi est-elle faite ?</span><span class="d">Blocs (BDD)</span><span class="tag more">En plus</span></a><a href="#f6"><span class="q">Que circule-t-il entre les pièces ?</span><span class="d">Blocs internes (IBD)</span><span class="tag more">En plus</span></a></div>
+<p class="note">Le diagramme de contexte n'est pas détaillé dans cette annexe. Il place la station au centre, avec autour d'elle les acteurs et les éléments de son environnement. Pour la syntaxe des blocs, voir les fiches 5 et 6.</p>
+<div class="views"><div><small>Fonctionnel</small><b>Que doit faire le système ?</b><p>Exigences, cas d'utilisation.</p></div>
+<div><small>Dynamique</small><b>Comment se comporte-t-il ?</b><p>Séquence, état.</p></div>
+<div><small>Statique</small><b>Comment est-il construit ?</b><p>Définition de blocs, blocs internes.</p></div></div></section>
+
+<section class="sec" id="relations"><h3>Les relations entre les éléments</h3>
+<p class="sub">Les mêmes symboles reviennent dans plusieurs diagrammes. Lisez toujours de A vers B.</p>
+<div class="rel"><div><svg viewBox="0 0 150 26" role="img" aria-label="Association"><line class="a" x1="6" y1="13" x2="140" y2="13" marker-end="url(#mo)"/></svg><b>Association</b><em>A utilise B</em><p>Cas d&#x27;utilisation, blocs</p></div><div><svg viewBox="0 0 150 26" role="img" aria-label="Dépendance"><line class="a dash" x1="6" y1="13" x2="140" y2="13" marker-end="url(#mo)"/></svg><b>Dépendance</b><em>A dépend de B</em><p>Exigences, cas d&#x27;utilisation, blocs</p></div><div><svg viewBox="0 0 150 26" role="img" aria-label="Agrégation"><line class="a" x1="6" y1="13" x2="125" y2="13"/><path class="mkh" d="M125 13 L133 9 L141 13 L133 17 Z"/></svg><b>Agrégation</b><em>A fait partie de B, sans être indispensable</em><p>Exigences, blocs</p></div><div><svg viewBox="0 0 150 26" role="img" aria-label="Composition"><line class="a" x1="6" y1="13" x2="125" y2="13"/><path class="mkf" d="M125 13 L133 9 L141 13 L133 17 Z"/></svg><b>Composition</b><em>A fait partie de B et lui est indispensable</em><p>Exigences, blocs</p></div><div><svg viewBox="0 0 150 26" role="img" aria-label="Généralisation"><line class="a" x1="6" y1="13" x2="128" y2="13"/><path class="mkh" d="M128 5 L142 13 L128 21 Z"/></svg><b>Généralisation</b><em>A est une sorte de B</em><p>Cas d&#x27;utilisation, blocs</p></div><div><svg viewBox="0 0 150 26" role="img" aria-label="Conteneur"><line class="a" x1="6" y1="13" x2="126" y2="13"/><circle class="b" cx="133" cy="13" r="7"/><path class="a" d="M133 8V18M128 13H138"/></svg><b>Conteneur</b><em>B contient A</em><p>Exigences, cas d&#x27;utilisation, blocs</p></div></div></section>
+
+<section class="sec"><h3>Les six fiches</h3><p class="sub">Les deux premières sont ouvertes. Touchez un titre pour ouvrir ou fermer une fiche.</p>
+<details class="fiche" id="f1" open>
+<summary><span class="fn">Fiche 1</span><b>Diagramme des exigences</b><code>req</code><span class="tag ask">Demandé dans le projet</span></summary>
+<div class="fbody"><div class="fcols"><div><p class="one">Il liste ce que la station doit faire et les contraintes qu'elle doit respecter. C'est votre cahier des charges, mis en forme.</p><h4>À retenir</h4><ul><li>Une exigence est une <b>capacité</b> ou une <b>contrainte</b> : fonction, performance, sécurité, fiabilité, ergonomie, esthétique.</li><li>Chaque cadre porte un <b>identifiant unique</b> (Id) et un <b>texte</b>.</li><li>Une exigence composite se découpe en <b>exigences unitaires</b>, reliées par le symbole conteneur.</li><li>Une exigence peut être reliée à autre chose : <code>refine</code> vers un cas d'utilisation ou un état, <code>satisfy</code> vers le bloc qui la réalise, <code>verify</code> vers le test qui la vérifie.</li><li>On peut ajouter une priorité, une source, un risque, un statut ou une méthode de vérification.</li></ul></div>
+<figure class="fig"><svg class="dg" viewBox="0 0 400 190" role="img" aria-label="Exemple de diagramme des exigences : la station iPod se décompose en trois exigences unitaires">
+<rect class="b" x="110" y="6" width="180" height="52"/>
+<text class="m" x="200" y="21" text-anchor="middle">«requirement»</text><text class="ti" x="200" y="36" text-anchor="middle">Station iPod</text><text class="m" x="200" y="51" text-anchor="middle">Id = 1</text>
+<path class="a" d="M67 124 L150 72 M200 124 V72 M333 124 L250 72"/><circle class="b" cx="150" cy="66" r="6"/><path class="a" d="M150 62.5V69.5M146.5 66H153.5"/><circle class="b" cx="200" cy="66" r="6"/><path class="a" d="M200 62.5V69.5M196.5 66H203.5"/><circle class="b" cx="250" cy="66" r="6"/><path class="a" d="M250 62.5V69.5M246.5 66H253.5"/>
+<rect class="b" x="8" y="124" width="118" height="52"/><text class="m" x="67" y="139" text-anchor="middle">«requirement»</text><text class="ti" x="67" y="154" text-anchor="middle">Compacte</text><text class="m" x="67" y="169" text-anchor="middle">Id = 1.1</text>
+<rect class="b" x="141" y="124" width="118" height="52"/><text class="m" x="200" y="139" text-anchor="middle">«requirement»</text><text class="ti" x="200" y="154" text-anchor="middle">1 ou 2 HP</text><text class="m" x="200" y="169" text-anchor="middle">Id = 1.2</text>
+<rect class="b" x="274" y="124" width="118" height="52"/><text class="m" x="333" y="139" text-anchor="middle">«requirement»</text><text class="ti" x="333" y="154" text-anchor="middle">Prise jack 3.5mm</text><text class="m" x="333" y="169" text-anchor="middle">Id = 1.3</text>
+</svg><figcaption>Exemple adapté : trois des six fonctions du cahier des charges de la station.</figcaption></figure></div>
+<div class="fcheck"><h4>Avant de rendre</h4><ul><li>Chaque exigence a un identifiant différent des autres.</li><li>Le critère est écrit (compacte, 1 ou 2 HP, prise jack 3.5mm…).</li><li>On sait comment vérifier chaque exigence : c'est l'objet de l'étape 6.</li></ul></div>
+<p class="src">Document original : page 101.</p></div></details><details class="fiche" id="f2" open>
+<summary><span class="fn">Fiche 2</span><b>Diagramme des cas d&#x27;utilisation</b><code>uc</code><span class="tag ask">Demandé dans le projet</span></summary>
+<div class="fbody"><div class="fcols"><div><p class="one">Il montre qui utilise la station et quels services elle rend, sans dire comment elle les rend.</p><h4>À retenir</h4><ul><li>Un <b>cadre</b> délimite le système. Les acteurs sont dehors, les services (ellipses) sont dedans.</li><li>Un cas d'utilisation décrit ce que fait <b>le système</b>, pas ce que fait l'utilisateur.</li><li>Les acteurs <b>humains</b> sont des bonshommes, les acteurs <b>non humains</b> des rectangles.</li><li>Dans certains logiciels, la couleur d'un acteur indique ce qu'il échange : bleu pour la matière, rouge pour l'énergie, vert pour l'information.</li><li><code>include</code> : le cas de base ne peut pas se faire sans l'autre. <code>extend</code> : il peut se faire avec, mais ce n'est pas obligatoire.</li></ul></div>
+<figure class="fig"><svg class="dg" viewBox="0 0 400 220" role="img" aria-label="Exemple de diagramme des cas d'utilisation : un utilisateur et l'iPod autour de la station">
+<rect class="a" x="112" y="4" width="188" height="212"/><text class="m" x="120" y="18">Station iPod</text>
+<ellipse class="b" cx="206" cy="46" rx="72" ry="19"/><text x="206" y="50" text-anchor="middle">Raccorder l'iPod</text>
+<ellipse class="b" cx="206" cy="112" rx="72" ry="19"/><text x="206" y="116" text-anchor="middle">Écouter la musique</text>
+<ellipse class="b" cx="206" cy="180" rx="72" ry="19"/><text x="206" y="184" text-anchor="middle">Régler le volume</text>
+<line class="a dash" x1="206" y1="93" x2="206" y2="65" marker-end="url(#mo)"/><text class="m" x="214" y="82">«include»</text>
+<line class="a dash" x1="206" y1="161" x2="206" y2="131" marker-end="url(#mo)"/><text class="m" x="214" y="150">«extend»</text>
+<circle class="b" cx="52" cy="84" r="9"/><path class="a" d="M52 93V122M34 104H70M52 122L38 146M52 122L66 146"/><text x="52" y="164" text-anchor="middle">Utilisateur</text>
+<path class="a" d="M70 104 L136 112 M64 108 L146 172"/>
+<rect class="b" x="328" y="94" width="66" height="36"/><text x="361" y="109" text-anchor="middle">iPod</text><text x="361" y="123" text-anchor="middle">shuffle</text>
+<line class="a" x1="278" y1="112" x2="328" y2="112"/>
+</svg><figcaption>Exemple adapté : « Écouter la musique » impose de raccorder l&#x27;iPod ; régler le volume est facultatif.</figcaption></figure></div>
+<div class="fcheck"><h4>Avant de rendre</h4><ul><li>Le cadre porte le nom de la station.</li><li>Chaque cas d'utilisation est un service rendu par la station.</li><li>Les flèches <code>include</code> et <code>extend</code> sont orientées comme dans l'exemple : de la base vers l'inclus, de l'extension vers la base.</li></ul></div>
+<p class="src">Document original : page 102.</p></div></details><details class="fiche" id="f3">
+<summary><span class="fn">Fiche 3</span><b>Diagramme de séquence</b><code>sd</code><span class="tag more">Pour aller plus loin</span></summary>
+<div class="fbody"><div class="fcols"><div><p class="one">Il montre dans quel ordre les messages s'échangent entre l'utilisateur, la station et l'iPod pendant un scénario.</p><h4>À retenir</h4><ul><li>Le temps descend de haut en bas.</li><li>Chaque acteur ou bloc a une <b>ligne de vie</b> : un trait pointillé sous un rectangle.</li><li>Flèche à tête pleine : message <b>synchrone</b>. Flèche ouverte : message <b>asynchrone</b>. Flèche pointillée : <b>retour</b>.</li><li>Un bloc peut s'envoyer un message à lui-même (message réflexif).</li><li>Il faut un diagramme par scénario possible.</li><li>Fragments : <code>loop</code> répète, <code>opt</code> est facultatif, <code>alt</code> choisit entre plusieurs possibilités, <code>par</code> fait en parallèle.</li></ul></div>
+<figure class="fig"><svg class="dg" viewBox="0 0 400 236" role="img" aria-label="Exemple de diagramme de séquence entre l'utilisateur, la station et l'iPod">
+<rect class="b" x="28" y="6" width="84" height="24"/><text class="ti" x="70" y="22" text-anchor="middle">Utilisateur</text>
+<rect class="b" x="158" y="6" width="84" height="24"/><text class="ti" x="200" y="22" text-anchor="middle">Station</text>
+<rect class="b" x="288" y="6" width="84" height="24"/><text class="ti" x="330" y="22" text-anchor="middle">iPod</text>
+<path class="a dash" d="M70 30V228M200 30V228M330 30V228"/>
+<line class="a" x1="70" y1="68" x2="198" y2="68" marker-end="url(#mf)"/><text x="134" y="62" text-anchor="middle">Poser l'iPod</text>
+<line class="a" x1="200" y1="108" x2="328" y2="108" marker-end="url(#mf)"/><text x="264" y="102" text-anchor="middle">Raccorder la prise jack</text>
+<line class="a" x1="330" y1="148" x2="202" y2="148" marker-end="url(#mo)"/><text x="266" y="142" text-anchor="middle">Signal audio</text>
+<line class="a dash" x1="200" y1="190" x2="72" y2="190" marker-end="url(#mo)"/><text x="136" y="184" text-anchor="middle">Son diffusé</text>
+</svg><figcaption>Exemple adapté : scénario « Écouter la musique ».</figcaption></figure></div>
+<div class="fcheck"><h4>Avant de rendre</h4><ul><li>Un seul scénario par diagramme.</li><li>Les messages sont dans l'ordre chronologique, de haut en bas.</li></ul></div>
+<p class="src">Document original : page 102.</p></div></details><details class="fiche" id="f4">
+<summary><span class="fn">Fiche 4</span><b>Diagramme d&#x27;état</b><code>stm</code><span class="tag more">Pour aller plus loin</span></summary>
+<div class="fbody"><div class="fcols"><div><p class="one">Il décrit les états successifs d'un bloc et les événements qui font passer de l'un à l'autre.</p><h4>À retenir</h4><ul><li>Début : un point plein. Fin : un cercle cible.</li><li>Une transition indique l'<b>événement déclencheur</b>, une éventuelle <b>condition</b> et l'<b>état cible</b>.</li><li>La condition de garde s'écrit entre crochets. Si plusieurs transitions partent du même événement, leurs conditions doivent être différentes. Le mot <code>else</code> couvre les autres cas.</li><li><code>when</code> : se déclenche quand une expression passe de faux à vrai. <code>after</code> : se déclenche après une durée passée dans l'état.</li><li>Transition propre : l'état est quitté puis retrouvé aussitôt. Transition interne : on reste dans l'état.</li></ul></div>
+<figure class="fig"><svg class="dg" viewBox="0 0 400 210" role="img" aria-label="Exemple de diagramme d'état de l'iPod : hors tension, en pause, en lecture">
+<circle class="fl" cx="16" cy="100" r="6"/><line class="a" x1="22" y1="100" x2="44" y2="100" marker-end="url(#mo)"/>
+<rect class="b" x="46" y="80" width="96" height="40" rx="12"/><text class="ti" x="94" y="104" text-anchor="middle">Hors tension</text>
+<rect class="b" x="290" y="14" width="100" height="40" rx="12"/><text class="ti" x="340" y="38" text-anchor="middle">En lecture</text>
+<rect class="b" x="290" y="150" width="100" height="40" rx="12"/><text class="ti" x="340" y="174" text-anchor="middle">En pause</text>
+<line class="a" x1="118" y1="120" x2="288" y2="166" marker-end="url(#mo)"/><text class="m" x="86" y="150">mettre sous tension</text>
+<line class="a" x1="316" y1="150" x2="316" y2="56" marker-end="url(#mo)"/><text class="m" x="308" y="106" text-anchor="end">appuyer sur lecture</text>
+<line class="a" x1="364" y1="56" x2="364" y2="148" marker-end="url(#mo)"/><text class="m" x="372" y="106">pause</text>
+<line class="a" x1="288" y1="38" x2="132" y2="82" marker-end="url(#mo)"/><text class="m" x="120" y="44">mettre hors tension</text>
+</svg><figcaption>Exemple adapté : les états d&#x27;un iPod, à compléter selon l&#x27;appareil que vous choisissez.</figcaption></figure></div>
+<div class="fcheck"><h4>Avant de rendre</h4><ul><li>Chaque flèche porte un événement.</li><li>Il y a un seul état initial.</li></ul></div>
+<p class="src">Document original : page 103.</p></div></details><details class="fiche" id="f5">
+<summary><span class="fn">Fiche 5</span><b>Diagramme de définition de blocs</b><code>bdd</code><span class="tag more">Pour aller plus loin</span></summary>
+<div class="fbody"><div class="fcols"><div><p class="one">Il décrit de quoi est faite la station : ses blocs et la façon dont ils s'assemblent.</p><h4>À retenir</h4><ul><li>Un bloc est une entité délimitée : tout le système, une pièce, ou un élément logiciel.</li><li>Il peut contenir des attributs, des opérations, des contraintes, des ports et des parts. Dans <code>block</code>, <b>part</b> désigne les éléments importants et <b>values</b> leurs critères.</li><li><b>Composition</b> (losange plein) : le bloc est indispensable. <b>Agrégation</b> (losange vide) : il est facultatif.</li><li>La <b>multiplicité</b> se note près du bloc : <code>1</code>, <code>0..1</code>, <code>1..2</code>, <code>0..*</code>.</li></ul></div>
+<figure class="fig"><svg class="dg" viewBox="0 0 400 220" role="img" aria-label="Exemple de diagramme de définition de blocs : la station est composée d'un support, de haut-parleurs et d'une prise jack, avec des pieds facultatifs">
+<rect class="b" x="120" y="6" width="160" height="44"/><text class="m" x="200" y="22" text-anchor="middle">«block»</text><text class="ti" x="200" y="38" text-anchor="middle">Station d'accueil</text>
+<path class="a" d="M150 64 L52 150 M178 64 L156 150 M222 64 L252 150 M250 64 L350 150"/>
+<path class="mkf" d="M150 50 L156 57 L150 64 L144 57 Z M178 50 L184 57 L178 64 L172 57 Z M222 50 L228 57 L222 64 L216 57 Z"/>
+<path class="mkh" d="M250 50 L256 57 L250 64 L244 57 Z"/>
+<rect class="b" x="8" y="150" width="88" height="40"/><text class="ti" x="52" y="174" text-anchor="middle">Support</text>
+<rect class="b" x="112" y="150" width="88" height="40"/><text class="ti" x="156" y="174" text-anchor="middle">Haut-parleur</text>
+<rect class="b" x="214" y="150" width="76" height="40"/><text class="ti" x="252" y="174" text-anchor="middle">Prise jack</text>
+<rect class="b" x="306" y="150" width="88" height="40"/><text class="ti" x="350" y="174" text-anchor="middle">Pied</text>
+<text class="acc" x="34" y="138">1</text><text class="acc" x="166" y="140">1..2</text><text class="acc" x="260" y="140">1</text><text class="acc" x="350" y="140">0..*</text>
+<text class="m" x="200" y="212" text-anchor="middle">losange plein : indispensable · losange vide : facultatif</text>
+</svg><figcaption>Exemple adapté : « 1 ou 2 HP » du cahier des charges devient la multiplicité 1..2.</figcaption></figure></div>
+<div class="fcheck"><h4>Avant de rendre</h4><ul><li>Chaque lien a le bon losange.</li><li>Les multiplicités sont cohérentes avec le cahier des charges.</li></ul></div>
+<p class="src">Document original : page 104.</p></div></details><details class="fiche" id="f6">
+<summary><span class="fn">Fiche 6</span><b>Diagramme de blocs internes</b><code>ibd</code><span class="tag more">Pour aller plus loin</span></summary>
+<div class="fbody"><div class="fcols"><div><p class="one">Il montre comment les pièces d'un bloc sont reliées et ce qui circule entre elles : matière, énergie, information.</p><h4>À retenir</h4><ul><li>Il se dessine <b>dans le cadre du bloc</b> étudié, à partir du diagramme de définition de blocs.</li><li>Les flux passent par des <b>connecteurs</b> reliés à des <b>ports</b>.</li><li><b>Port de flux</b> : flux physique, données ou énergie. À un seul sens, il est atomique ; à double sens, il est composite.</li><li><b>Port standard</b> : événement ponctuel, comme un bouton marche/arrêt.</li><li>Une multiplicité indique qu'on peut connecter plusieurs instances.</li></ul></div>
+<figure class="fig"><svg class="dg" viewBox="0 0 400 190" role="img" aria-label="Exemple de diagramme de blocs internes : le signal audio circule de l'iPod vers la prise jack puis vers le haut-parleur">
+<rect class="b" x="2" y="76" width="52" height="40"/><text class="ti" x="28" y="93" text-anchor="middle">iPod</text><text class="ti" x="28" y="107" text-anchor="middle">shuffle</text>
+<rect class="a dash" x="70" y="6" width="326" height="176" rx="6"/><text class="m" x="80" y="23">ibd [block] Station d'accueil</text>
+<line class="a" x1="54" y1="96" x2="108" y2="96" marker-end="url(#mf)"/>
+<rect class="b" x="64" y="90" width="12" height="12"/>
+<rect class="b" x="106" y="70" width="92" height="52"/><text class="ti" x="152" y="92" text-anchor="middle">Prise jack</text><text class="m" x="152" y="108" text-anchor="middle">part</text>
+<rect class="b" x="296" y="70" width="92" height="52"/><text class="ti" x="342" y="92" text-anchor="middle">Haut-parleur</text><text class="m" x="342" y="108" text-anchor="middle">part</text>
+<rect class="b" x="192" y="90" width="12" height="12"/><rect class="b" x="290" y="90" width="12" height="12"/>
+<line class="a" x1="204" y1="96" x2="288" y2="96" marker-end="url(#mf)"/><text x="246" y="88" text-anchor="middle">signal audio</text>
+<text class="m" x="64" y="140">port de flux</text><path class="a" d="M70 144V152" /><text class="acc" x="246" y="140" text-anchor="middle">connecteur</text>
+</svg><figcaption>Exemple adapté : le signal audio entre dans la station par la prise jack.</figcaption></figure></div>
+<div class="fcheck"><h4>Avant de rendre</h4><ul><li>Chaque connecteur relie deux ports.</li><li>La nature du flux est écrite sur le connecteur.</li></ul></div>
+<p class="src">Document original : page 104.</p></div></details></section>
+
+<section class="sec" id="original"><h3>Le document original</h3>
+<p class="sub">Pour les schémas complets de la revue, ouvrez le PDF. Les pages sont aussi dans <code>images/</code>.</p>
+<ul class="docs"><li><a href="../documents/DT-diagrammes-SYSML.pdf" download><span class="ext">PDF</span><span class="nm">SysML : les diagrammes<small>Document original, 5 pages · <code>documents/DT-diagrammes-SYSML.pdf</code></small></span><span class="dl">Ouvrir</span></a></li></ul>
+<div class="slots"><figure class="slot"><img src="../images/annexe-sysml-p-1.jpg" alt="Document original, page 1 sur 5" loading="lazy" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+<figcaption><b>Image à insérer</b><span class="path"><code>images/annexe-sysml-p-1.jpg</code></span><span>Page 1 sur 5 de « SysML : les diagrammes »</span></figcaption></figure><figure class="slot"><img src="../images/annexe-sysml-p-2.jpg" alt="Document original, page 2 sur 5" loading="lazy" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+<figcaption><b>Image à insérer</b><span class="path"><code>images/annexe-sysml-p-2.jpg</code></span><span>Page 2 sur 5 de « SysML : les diagrammes »</span></figcaption></figure><figure class="slot"><img src="../images/annexe-sysml-p-3.jpg" alt="Document original, page 3 sur 5" loading="lazy" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+<figcaption><b>Image à insérer</b><span class="path"><code>images/annexe-sysml-p-3.jpg</code></span><span>Page 3 sur 5 de « SysML : les diagrammes »</span></figcaption></figure><figure class="slot"><img src="../images/annexe-sysml-p-4.jpg" alt="Document original, page 4 sur 5" loading="lazy" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+<figcaption><b>Image à insérer</b><span class="path"><code>images/annexe-sysml-p-4.jpg</code></span><span>Page 4 sur 5 de « SysML : les diagrammes »</span></figcaption></figure><figure class="slot"><img src="../images/annexe-sysml-p-5.jpg" alt="Document original, page 5 sur 5" loading="lazy" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+<figcaption><b>Image à insérer</b><span class="path"><code>images/annexe-sysml-p-5.jpg</code></span><span>Page 5 sur 5 de « SysML : les diagrammes »</span></figcaption></figure></div>
+<p class="note">Ouvrage de référence cité par les auteurs : « SysML par l'exemple », Pascal Roques, Eyrolles.</p></section>
+<div class="pager"><a class="btn ghost" href="etape3-cahier-des-charges-sysml.html">← Étape 3 · Cahier des charges et SysML</a><a class="btn" href="evaluation.html">Évaluation →</a></div>
+</div></main>
+<footer><div class="in">Séquence B · « Comment créer et modéliser une station d'accueil pour iPod Shuffle ? » · IT+I2D. La progression et les saisies restent dans ce navigateur.</div></footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

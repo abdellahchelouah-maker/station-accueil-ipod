@@ -1,0 +1,7 @@
+Fichiers à placer ici (noms attendus par les pages du site) :
+ - Sujet et évaluation : ipod-station-sujet.pdf, bareme-de-notation.pdf
+ - Dossier à rendre (seul endroit où l'élève dépose ses productions) : station-ipod-dossier-a-rendre.docx
+ - Annexe SysML : DT-diagrammes-SYSML.pdf (déjà fourni)
+ - Leçon créativité, en binôme : carte-mentale.ppt, brainstorming.ppt, travail-demande.pptx
+ - Fiches outils : guidance-ipod-1.pdf, fiche-outils-solidworks.pdf, fiche-outils-sysml.pdf, fiche-outils-creativite.pdf
+ - Pièces SolidWorks fournies : haut-parleur.sldprt, prise-jack.sldprt
